@@ -12,22 +12,24 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 #Matrixx Flags
-# To include Gapps 
-WITH_GMS := true
-
-# To Build Google(Dailer, Message, Phone) and BCR
-WITH_GMS_COMMS_SUITE := true
-
-# To Add cinematic wallpaer support (only supported in gapps build not in vanilla remove this flag for vanilla builds)
+MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_MAINTAINER := Chronix
+MATRIXX_CHIPSET := Snapdragon 675
+MATRIXX_BATTERY := 4000mAh
+MATRIXX_DISPLAY := 1080x2340
 TARGET_SUPPORTS_WALLEFFECT := true
-
-#Some more GMS Flag
+BYPASS_CHARGE_SUPPORTED  := true
+WITH_GMS := true
+WITH_GMS_COMMS_SUITE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_STOCK_AICORE := true
 
-# To Add Bypass Charging Support (need to be adapted in DT and KT as well)
-BYPASS_CHARGE_SUPPORTED  := true
+# Inherit Camera-related flags
+TARGET_USES_MIUI_CAMERA := true
+TARGET_INCLUDES_MIUI_CAMERA := true
+
+#Some Other Flags
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_BUILD_APERTURE_CAMERA := false
 
