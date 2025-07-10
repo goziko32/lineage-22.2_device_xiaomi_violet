@@ -12,7 +12,7 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 #Matrixx Flags
-MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_BUILD_TYPE := Official
 MATRIXX_MAINTAINER := Chronix
 MATRIXX_CHIPSET := Snapdragon 675
 MATRIXX_BATTERY := 4000mAh
@@ -31,13 +31,9 @@ TARGET_INCLUDES_MIUI_CAMERA := true
 
 #Some Other Flags
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_BUILD_APERTURE_CAMERA := false
 
 #Include ViperFX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
-
-#GAPPS
-WITH_GAPPS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_violet
