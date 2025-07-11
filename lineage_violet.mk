@@ -13,7 +13,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 #Matrixx Flags
 MATRIXX_BUILD_TYPE := Official
-MATRIXX_MAINTAINER := Chronix
+MATRIXX_MAINTAINER := Chronix X Anirban
 MATRIXX_CHIPSET := Snapdragon 675
 MATRIXX_BATTERY := 4000mAh
 MATRIXX_DISPLAY := 1080x2340
