@@ -32,9 +32,6 @@ TARGET_INCLUDES_MIUI_CAMERA := true
 #Some Other Flags
 TARGET_BOOT_ANIMATION_RES := 1080
 
-#Include ViperFX
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
-
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_violet
 PRODUCT_DEVICE := violet
