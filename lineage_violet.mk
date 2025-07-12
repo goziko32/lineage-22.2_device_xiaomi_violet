@@ -11,18 +11,28 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common EvoX stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-#EvoX Flags
-EVO_BUILD_TYPE := Unofficial
+# Rising Os
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_BUILD_APERTURE_CAMERA := false
+TARGET_BUILD_APERTURE_CAMERA := true
 BYPASS_CHARGE_SUPPORTED  := true
 
 #Include ViperFX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
-#GAPPS
+# full gapps build
 WITH_GMS := true
-WITH_GAPPS := true
+BUILD_WITH_GAPPS := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_INCLUDE_GOOGLE_DIALER := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+TARGET_ENABLE_BLUR := true
+PRODUCT_NO_CAMERA := true
+
+# Maintainer
+RISING_MAINTAINER := Anirban_X_Chronix
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 675" \
+    RisingMaintainer="Anirban_X_Chronix"
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_violet
