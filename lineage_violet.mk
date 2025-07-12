@@ -16,8 +16,6 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_BUILD_APERTURE_CAMERA := true
 BYPASS_CHARGE_SUPPORTED  := true
 
-#Include ViperFX
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # full gapps build
 WITH_GMS := true
